@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transcriber Chatbot | Pranshu</title>
+  </head>
+  <body style="background-color: #2f2f2f; color: #ffffff">
+    <h1 style="color:lime;">Transcriber Chatbot</h1>
+    <h4 style="margin-bottom: 50px;">LLM to transcribe any text or audio file</h4>
+
+    {% for chat in chats %}
+        {% if chat.role == 'user' %}
+            <p style="color:darkseagreen"><b>{{ chat.role }}</b>: {{ chat.content }}</p>
+        {% else %}
+            <p style="color: darkmagenta;"><b>{{ chat.role }}</b>: {{ chat.content }}</p>
+        {% endif %}
+    {% endfor %}
+    <form
+      action="/"
+      method="post"
+      enctype="multipart/form-data"
+      style="display: flex; flex-direction: column; width: 100%; gap: 20px"
+    >
+      <div>
+        <label style="width: 40%;">Trascriber text:</label>
+        <input style="width: 80%; height: 90%; padding: 5px;" type="text" name="Trascriber" id="Transcriber" />
+      </div>
+
+      <div>
+        <label style="width: 40%;">Your message:</label>
+        <input style="width: 80%; height: 90%; padding: 5px;" type="text" name="message" id="message" />
+      </div>
+
+      <div>
+        <label style="width: 40%;">Voice message:</label>
+        <input accept="audio/*" style="width: 80%; height: 90%; padding: 5px;" type="file" name="audio" id="audio" />
+      </div>
+
+      <button style="width: 20%; margin-top: 30px; background-color:aqua; padding: 3px;" type="submit">Send</button>
+    </form>
+  </body>
+</html>
