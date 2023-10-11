@@ -4,10 +4,7 @@ import streamlit as st
 # pip install streamlit-chat  
 from streamlit_chat import message
 
-openai.api_key = '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'
-# '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' # didi's accout, not working # st.secrets["api_secret"]
-# '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' , vit account
-# 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 , personal account
+openai.api_key = ''
 
 def generate_response(prompt):
     # completions = openai.Completion.create(
