@@ -1,10 +1,12 @@
 # Transcriber Chatbot
 
-# Run Locally
+## Run Locally
 
 ```
-python3 api.py
+python api.py
 ```
+
+## Screenshots
 
 ![image](https://github.com/Pranshu1902/Transcriber-Chatbot/assets/70687348/e6448cb3-40d1-4cf0-82c7-13aafdaaedfa)
 
